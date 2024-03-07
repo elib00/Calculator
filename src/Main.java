@@ -8,5 +8,6 @@ public class Main {
         String expression = sc.nextLine();
         Calculator calc = new Calculator(expression);
         calc.calculate();
+        sc.close();
     }
 }
