@@ -7,7 +7,7 @@ public class Main {
         System.out.print("Enter an expression: ");
         String expression = sc.nextLine();
         Calculator calc = new Calculator(expression);
-        calc.calculate();
+        calc.calculatePEMDAS();
         sc.close();
     }
 }

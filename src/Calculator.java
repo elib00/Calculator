@@ -34,7 +34,7 @@ public class Calculator {
         return arr;
     }
 
-    public void calculate() {
+    public void calculatePEMDAS() {
         int len = expressionTokens.size();
         Stack<String> st1 = new Stack<>();
         Stack<String> st2 = new Stack<>();
