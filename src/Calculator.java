@@ -34,7 +34,7 @@ public class Calculator {
         return arr;
     }
 
-    public void calculatePEMDAS() {
+    public String calculatePEMDAS() {
         int len = expressionTokens.size();
         Stack<String> st1 = new Stack<>();
         Stack<String> st2 = new Stack<>();
@@ -74,6 +74,12 @@ public class Calculator {
 
         ArrayList<String> expression2 = invert(st1);
         len = expression2.size();
+
+        // if the expression has only one element, then it is the answer already
+        if (len == 1) {
+            return expression2.get(0);
+        }
+
         found = false;
 
         // for sub and add
@@ -108,5 +114,8 @@ public class Calculator {
             }
 
         }
+
+        System.out.println(st2.peek());
+        return st2.peek();
     }
 }
